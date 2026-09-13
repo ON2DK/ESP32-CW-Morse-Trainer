@@ -4,6 +4,10 @@ Open-source ESP32 Morse/CW trainer designed by **ON2DK**.
 
 The ESP32 CW Morse Trainer V2 is a stand-alone Morse trainer built around a **38-pin ESP32 DevKit with ESP32-WROOM-32D**. It is intended for CW practice without connecting a transceiver.
 
+![ESP32 CW Trainer V2 front PCB](Images/ESP32_CW_TRAINER_V2%20front%20PCB.png)
+
+![ESP32 CW Trainer V2 back PCB](Images/ESP32_CW_TRAINER_V2%20back%20PCB.png)
+
 ## Main features
 
 - 38-pin ESP32 DevKit with ESP32-WROOM-32D
@@ -32,24 +36,34 @@ The hardware design is complete and the final PCB was checked in KiCad before ge
 
 The buzzer position was adjusted in the final layout to improve connector access.
 
-## Repository structure
+## Downloads and repository structure
 
-- `KiCad/` - KiCad source package
-- `Gerber/` - production Gerber and drill package
-- `Firmware/` - Arduino IDE firmware and firmware notes
-- `Enclosure/` - enclosure files and mechanical notes
-- `Documentation/` - build and project documentation
-- `Images/` - PCB, schematic and 3D-view images
+- `KiCad/` - editable KiCad source package: `ESP32_CW_TRAINER_V2_KiCad_Source.zip`
+- `Gerber/` - production package: `ESP32_CW_TRAINER_V2_Gerber.zip`
+- `Enclosure/` - STL files for front panel, rear panel, bottom and lid, plus editable OpenSCAD source
+- `Documentation/` - project logbook, BOM and build notes
+- `Images/` - front and back PCB images
+- `Firmware/` - reserved for the Arduino IDE firmware
+
+### Enclosure files
+
+The enclosure folder contains the current mechanical design for the CW Trainer V2, including a front-panel opening for the 2.8-inch TFT so that only the display area is visible.
+
+Current files include:
+
+- `ESP32_CW_TRAINER_V2_Frontpaneel.stl`
+- `ESP32_CW_TRAINER_V2_Achterpaneel.stl`
+- `ESP32_CW_TRAINER_V2_Kast_Bodem.stl`
+- `ESP32_CW_TRAINER_V2_Kast_Deksel.stl`
+- `ESP32_CW_TRAINER_V2_Kast_NIEUW.scad`
+
+### Documentation
+
+The final project logbook with BOM is available under `Documentation/` as:
+
+`ESP32_CW_TRAINER_V2_Projectlogboek_DEFINITIEF_MET_BOM.docx`
 
 ## Production files
-
-The current production package is available in:
-
-- `Gerber/ESP32_CW_TRAINER_V2_Gerber.zip`
-
-The editable KiCad source package is available in:
-
-- `KiCad/ESP32_CW_TRAINER_V2_KiCad_Source.zip`
 
 Before ordering a PCB, inspect the Gerbers in a Gerber viewer and verify board outline, drill files, silkscreen, masks and both copper layers.
 
@@ -79,10 +93,12 @@ Test the 5 V supply before fitting sensitive modules such as the ESP32 and TFT.
 
 ## Firmware
 
-The hardware is designed for the ESP32 Morse Trainer firmware line using an ST7789 240 x 320 display. Firmware is kept separately under `Firmware/` so software revisions can evolve without changing the production PCB files.
+The `Firmware/` folder is intentionally not presented as final yet. The Arduino IDE firmware will be published after it has been reconciled with the definitive V2 PCB pin mapping and tested with the hardware.
 
 ## Project status
 
 **Hardware V2: complete / production files prepared.**
 
-Firmware, enclosure and documentation may continue to receive updates.
+**Enclosure and documentation: available.**
+
+**Firmware: pending final pin-mapping verification and hardware testing.**
