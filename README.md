@@ -55,7 +55,7 @@ Current files include:
 - `ESP32_CW_TRAINER_V2_Achterpaneel.stl`
 - `ESP32_CW_TRAINER_V2_Kast_Bodem.stl`
 - `ESP32_CW_TRAINER_V2_Kast_Deksel.stl`
-- `ESP32_CW_TRAINER_V2_Kast_NIEUW.scad`
+- `ESP32_CW_TRAINER_V2_Kast.scad`
 
 ### Documentation
 
